@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Register </title>
+					
+	</head>
+	<body>
+     		<nav>
+        		<a href="{{url_for('index')}}"><img border="0" alt="Competency Level Perdictor" src="../static/logo.jpg" class="logo"></a>
+     		</nav>
+
+		</br></br></br></br></br>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 align="center" class="word">Register</h1>
+			</div>
+			<h2 class="word">
+				<form action="{{url_for('register')}}" method="post">
+				<div class="msg">{{ msg }}</div>
+					</br>
+					<input id="email" name="email" type="text" placeholder="Enter Your MailId" class="textbox" required/></br>
+					<input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox" required/></br>
+					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox" required/></br>
+					<input type="submit" class="btn" value="Sign Up"></br>
+				</form>
+			</h2>
+			<p class="bottom">Already have an account? <a class="bottom" href="{{url_for('login')}}"> Sign In here</a></p>
+		</div>
+		</div>
+	</body>
+
+	<style>
+		body{
+			font-size: 20px;
+			overflow-x: hidden;
+			color: #FFF0F5;
+			font-family: 'Merienda One', cursive;
+		}
+
+
+		input[type=text],input[type=password],input[type=email]{
+        		width: 40%;
+        		padding: 15px;
+        		margin: 5px 0 22px 0;
+        		display: inline-block;
+        		border: none;
+        		background: #f1f1f1;
+    		}
+
+		input[type=text]:focus,input[type=password]:focus,input[type=email]:focus{
+        		background-color:orange;
+        		outline: none;
+    		}
+
+		input[type=submit]{
+        		background-color: #4CAF50;
+        		color: white;
+        		padding: 16px 20px;
+        		margin:8px 0;
+        		border: none;
+        		cursor: pointer;
+        		width: 20%;
+        		opacity: 0.9;
+    		}
+
+		.logo{
+			width: 130px;
+			height: 130px;
+			padding: 5px;
+			float: left;
+			background: white;
+			margin-top: 20px;
+		}
+
+		body{
+			background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../static/time.jpg');
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-position: left;
+			height: 100vh;
+
+		}
+    
+	</style>
+
+
+</html>

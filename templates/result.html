@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+        		 
+        		 <ul>
+        		  <li><a href="{{url_for('home')}}">Dashboard</a></li>
+        		  <li><a href="{{url_for('login')}}">Form</a></li>
+			  <li><a href="{{url_for('register')}}">LOGOUT</a></li>
+        		 </ul>
+        </div>
+     </nav>
+
+	<div class="about">
+    	
+        {%if pred==3%}
+            <h1>Your Competency level is 1</h1>
+            <p>You need to work harder to survive in this industry. Don't Give Up.</br> You can do it.</p>
+            <p><quote>The secret of getting ahead is getting started.</quote>by Mark Twain</p>
+
+        {%elif pred==1%}
+            <h1>Your Competency level is 2</h1>
+            <p>Try harder, your becoming more stronger each day. Challenge yourself.</br> You can do it.</p>
+            <p><quote>All our dreams can come true, if we have the courage to pursue them.</quote>by Walt disney</p>
+                    
+        {%elif pred==4%}
+            <h1>Your Competency level is 3</h1>
+            <p>Standing in the middle. There's no turning back now. Don't give up.</br> You can do it.</p>
+            <p><quote>Its hard to beat a person who never gives up.</quote>by Babe Ruth</p>
+             
+        {%elif pred==2%}
+            <h1>Your Competency level is 4</h1>
+            <p>Don't stop now. You have reached so far, walk few more steps towards your goal. </br> You can do it.</p>
+            <p><quote>If people are doubting how far you can go, go so far that you can't hear them anymore.</quote>by Michele Ruiz</p>
+            
+        {%else%}
+            <h1>Your Competency level is 5</h1>
+            <p>My dear friend your hardwork will pay you soon. </br> </p>
+            <p><quote>Don't limit yourself.Many people limit themselves to what they think they can do. You can go as far as your mind lets you. What you believe, remember you can achieve.</quote>by Mary Kay Ash</p>
+            
+    {%endif%}
+
+     </div>
+
+    
+</body>
+
+<style>
+	body{
+		font-size: 20px;
+		overflow-x: hidden;
+		color: black;
+		font-family: 'Merienda One', cursive;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	a{
+		color: white;
+	}
+
+
+	nav{
+		float: right;
+		margin-top: 60px;
+
+	}
+
+	li{
+		display: inline-block;
+		list-style: none;
+		margin-left: 40px;
+		color: black;
+	}
+
+	.main-nav li a{
+		padding: 4px 0;
+		color: black;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 90%;
+		font-weight: 200;
+	}
+
+	.about{
+	width: 1180px;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	}
+
+
+	body{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../static/op.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 100vh;
+
+}
+
+</style>
+</html>

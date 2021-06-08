@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>predict</title>
+</head>
+
+<body>
+    <form action="{{ url_for('result') }}" method="post">
+        <div class="container">
+            <h2><center>Let's know you a little bit...</center></h2
+            <hr>
+            <label>SSC Percentage</label>
+            <input type="number" id="ssc_p" name="ssc_p" placeholder="99" min="40" max="100" size="15" required/>
+            <label>HSC Percentage</label>
+            <input type="number" id="hsc_p" name="hsc_p" placeholder="99" min="40" max="100" size="15" required/>
+            <div>
+                <label>Degree</label>
+                <input type="radio" value="0" name="degree" checked>B. E.
+                <input type="radio" value="1" name="degree">B. Tech.
+                </br></br>
+                <label>Degree Stream</label>
+                <select name="deg_stream" id="deg_stream" required="required">
+                    <option value="1">Computer and related branches</option>
+                    <option value="2">Information Technology</option>
+                    <option value="3">Electronics and related branches</option>
+                </select>
+                </br></br>
+                <label>Degree Percentage</label>
+                <input type="number" id="deg_p" name="deg_p" placeholder="99" min="40" max="100" size="15" required/>
+                <label>How much interested you are in this degree?</label>
+                <input type="number" id="interest" name ="interest" placeholder="1-5" min="1" max="5" size="15" required/>
+                <div class="txt">
+                    <label>Do you refer textbooks?</label>
+                    <input type="radio" value="1" name="textbook" checked>Yes
+                    <input type="radio" value="0" name="textbook">No
+                </div>
+                <div class="ref">
+                    <label>You study from reference books?</label>
+                    <input type="radio" value="1" name="refbook" checked>Yes
+                    <input type="radio" value="0" name="refbook">No
+                </div>
+                <div class="internet">
+                    <label>Do you use internet to study?</label>
+                    <input type="radio" value="1" name="internet" checked>Yes
+                    <input type="radio" value="0" name="internet">No     
+                </div>          
+            </div>
+            </br></br>
+            <div>
+                <label>Rate your knowledge level in data structures.</label>
+                <input type="number" id="ds" name ="ds" placeholder="1-5" min="1" max="5" size="15" required/>
+                <label>Rate your knowledge level in algorithms.</label>
+                <input type="number" id="algo" name ="algo" placeholder="1-5" min="1" max="5" size="15" required/>
+                <label>Rate your knowledge level in object oriented programming.</label>
+                <input type="number" id="oop" name ="oop" placeholder="1-5" min="1" max="5" size="15" required/>
+                <label>Rate your knowledge level in computer networks.</label>
+                <input type="number" id="cn" name ="cn" placeholder="1-5" min="1" max="5" size="15" required/>
+                <label>Rate your knowledge level in database.</label>
+                <input type="number" id="db" name ="db" placeholder="1-5" min="1" max="5" size="15" required/>
+                <label>Rate your knowledge level in operating system.</label>
+                <input type="number" id="os" name ="os" placeholder="1-5" min="1" max="5" size="15" required/>
+            </div>
+             <div>
+                 <div class="code">
+                    <label>Do you practice coding?</label>
+                    <input type="radio" value="1" name="code_pract" checked>Yes
+                    <input type="radio" value="0" name="code_pract">No  
+                </div>
+                <div class="hrs">
+                    <label>For how many hours you practice coding?</label>
+                    <input type ="text" id="code_hrs" name="code_hrs" placeholder="0-24" min="0" max="24" size="15" required/>
+                </div>
+                <div class="compc">
+                    <label>Do you practicee competetive coding?</label>
+                    <input type="radio" value="1" name="comp_code" checked>Yes
+                    <input type="radio" value="0" name="comp_code">No  
+                </div>
+                </br></br>
+                <div class="gfg">
+                    <label>Do you practice coding in geeks for geeks?</label>
+                    <input type="radio" value="1" name="gfg" checked>Yes
+                    <input type="radio" value="0" name="gfg">No 
+                </div>
+                <div class="hrank"> 
+                    <label>Do you practice coding in hackerrank?</label>
+                    <input type="radio" value="1" name="hrank" checked>Yes
+                    <input type="radio" value="0" name="hrank">No  
+                </div>
+                <div class="heart">
+                    <label>Do you practice coding in hackerearth?</label>
+                    <input type="radio" value="1" name="hearth" checked>Yes
+                    <input type="radio" value="0" name="hearth">No  
+                </div class="ques">
+                    <label>Approximately how many questions you have practiced till now?</label>
+                    <input type ="number" name="code_ques" placeholder="Number of coding question should be greater than or equal to 0" min="0" size="15" required/>
+                <div>
+                <div class="it">
+                    <label>Have you done any internship?</label>
+                    <input type="radio" value="1" name="internship" checked>Yes
+                    <input type="radio" value="0" name="internship">No  
+                </div>
+                <div clas="itype">
+                    <label>What type of internship it was?</label>
+                    <input type="radio" value="1" name="intern_type" checked>Technical
+                    <input type="radio" value="2" name="intern_type">Non Technical
+                    <input type="radio" value="3" name="intern_type">Not Done  
+                </div>
+                <div class="course">
+                    <label>How many courses you have completed?</label>
+                    <input type="number" name="no_course" placeholder="Number greater than or equal to 0" size="15" required/>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="compbtn">Competency Level</button>
+    </form>
+    <p class="bottom">Will find next time...<a class="bottom" href="{{url_for('home')}}"> Go back to dashboard</a></p>
+</body>
+
+<style>
+    body{
+        font-family: Calibri, Helvetica, sans-serif;
+        background-color: pink;
+    }
+    
+    .container{
+        padding: 50px;
+        background-color: lightblue;
+    }
+    
+    .txt{
+        
+        float: left;
+    }
+    
+    .ref{
+        padding-left: 170px;
+        float: left;
+    }
+    
+    .internet{
+        padding-left: 270px;
+        float: left;
+    }    
+    
+    .code{
+        
+        float: left;
+    }
+    
+    .hrs{
+        padding-left: 150px;
+        float: left;
+    }
+    
+    .compc{
+        padding-left: 230px;
+        float: left;
+    }
+
+    input[type=number]{
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+    
+    input[type=number]:focus{
+        background-color:orange;
+        outline: none;
+    }
+    
+    div{
+        padding: 10px 0;
+    }
+    
+    hr{
+        border: 1px solid #f1f1f1;
+        marging-bottom: 25px;
+    }
+    
+    .compbtn{
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        margin:8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+    
+    .compbtn:hover{
+        opacity:1;
+    }
+</style>
+</html>

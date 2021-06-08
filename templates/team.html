@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Our Team</title>
+   <meta name="viewport" content="width=device-width,initial scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+	<header>
+     		<nav>
+       	 	<div class="row clearfix">
+        		 <nav>
+        			<a href="{{url_for('index')}}"><img border="0" alt="Competency Level Perdictor" src="../static/logo.jpg" class="logo"></a>
+     			</nav>
+
+        		 <ul class="main-nav">
+        		  <li><a href="{{url_for('index')}}">HOME</a></li>
+        		  <li><a href="{{url_for('login')}}">LOGIN</a></li>
+			  <li><a href="{{url_for('register')}}">REGISTER</a></li>
+			  <li><a href="{{url_for('team')}}">OUR TEAM</a></li>
+        		 </ul>
+        	</div>
+     		</nav>
+	 </header>
+	</br></br></br></br></br></br>
+	<div class="row">
+		<div class="column">
+			<p><center>Under the Guidance of</center></br><center> <b>Dr. Prof. S. P. Kadam</b></center></p>
+		</div>
+		<div class="column">
+			<p><center>Team members:</center></br>
+			<p><center><b>Mamta Negi<b></center></p>
+			<p><center><b>Sanjana Nalawade<b></center></p>
+			<p><center><b>Divya Khairnar<b></center></p>
+			<p><center><b>Shreya Patil<b></center></p>
+		</div>
+	</div>
+
+</body>
+
+<style>
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 20px;
+	overflow-x: hidden;
+	color: white;
+	font-family: 'Merienda One', cursive;
+}
+
+.clearfix:after{
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0px;
+	clear: both;
+
+}
+
+.row{
+	max-width: 1180px;
+	margin: 0 auto;
+
+}
+
+.logo{
+	height: 120px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
+}
+
+.main-nav{
+	float: right;
+	margin-top: 40px;
+
+}
+
+.main-nav li{
+	display: inline-block;
+	list-style: none;
+	margin-left: 40px;
+
+}
+
+.main-nav li a{
+	padding: 4px 0;
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 100%;
+	font-weight: 200;
+
+}
+
+.main-nav li a:hover{
+	border-bottom: 2px solid black;
+}
+
+.logo{
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+	background: white;
+}
+
+body{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../static/notes.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 100vh;
+	background-blend-mode: lighten;
+}
+
+center{
+	color: black;
+	font-size: 40px
+}
+
+.column{
+	float:left;
+	width: 50%;
+}
+
+
+.row:after{
+	content:"";
+	display: table;
+	clear:both;
+}
+
+</style>
+
+</html>

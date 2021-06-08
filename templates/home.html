@@ -1,0 +1,55 @@
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Home: Dashboard </title>
+						
+	</head>
+	<body></br></br></br></br></br>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">Dashboard</h1>
+			</div></br>
+				<h1 class="bottom">
+					Hi {{session.username}}!!</br></br> Welcome to the dashboard...				
+				</h1></br></br></br>
+				<a href="{{ url_for('predict') }}" class="btn">Predict</a>
+				</br>
+				</br></br>				
+				<a href="{{ url_for('logout') }}" class="btn">Logout</a>
+		</div>
+		</div>
+	</body>
+
+	<style>
+		body{
+			font-size: 20px;
+			overflow-x: hidden;
+			color: #FFF0F5;
+			font-family: 'Merienda One', cursive;
+		}
+
+
+		a{
+			font-family: Calibri, Helvetica, sans-serif;
+			font-size : 30px;
+			width: 1180px;
+			position: absolute;
+			
+			transform: translate(-50%, -50%);
+			color: white;
+		}
+		
+		
+		body{
+			background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../static/lock.jpeg');
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-position: left;
+			height: 100vh;
+
+		}
+
+	</style>
+</html>
